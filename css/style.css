@@ -1,0 +1,555 @@
+/* Universal */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    max-width: 1024px;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    padding-top: 30px;
+    background-color: #b3e8f7;
+    margin-bottom: 5px;
+    padding-bottom: 30px;
+    
+  }
+
+.btn {
+    color: #fff;
+  border: 1px solid #f2f4f8;
+  border-top: 1px solid #f2f4f8;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #21d397 0%, #7450fe 100%);
+  padding: 15px 25px;
+}
+
+.btn-result{
+    margin-top: 30px;
+}
+
+/* ------------------------Section Page---------------------------- */
+/* Navbar */
+/* Bagian Navbar */
+nav{
+    display: flex;
+    background-color: rgb(52, 163, 238);
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    color: rgb(165, 91, 235);
+    height: 100px;
+    align-items: center;
+    transition: 0.6s;
+}
+
+nav .logo{
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 3px;
+    font-size: medium;
+    transition: 0.6s;
+}
+ 
+nav ul{
+    position: relative;
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li{
+    position: relative;
+}
+
+nav ul li a{
+    position: relative;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 0.8em;
+    transition: 00.6s;
+}
+
+nav ul li a:hover {
+    color: powderblue;
+}
+/* Akhir Nvbar */
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block  ;
+    width: 28px;
+    height: 3px;
+    background-color:rgb(255, 255, 255);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0)
+}
+
+
+/* Responsive Breakpoint */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px){
+    nav ul{
+        width: 50%;
+    }
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle{
+        display: flex;
+    }
+
+    nav ul{
+        position: absolute;
+        width: 80%;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(52, 163, 238);
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    nav ul.slide {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+/* Akhir Navbar */
+
+/* Section Home */
+.section-home{
+    background-image: url(../img/bg-img/header-1.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+    
+
+.home{
+    width: 50%;
+    margin: 200px 100px;
+}
+
+.home h3{
+    font-size: 18px;
+}
+
+.home h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #272e3a;
+}
+
+.home p{
+    color: #888888;
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-top: 0;
+    line-height: 1.9;
+}
+
+.btn-home .btn{
+    display: inline-block;
+}
+
+
+/* Akhir Section Home */
+
+
+
+/* Section 2, Real Time chat ( Features) */
+.realtime{
+    margin: 100px;
+}
+
+.realtime-col{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.realtime-col-satu{
+    width: 100%;
+}
+
+.realtime-col h4{
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #354168;
+    line-height: 1.4;
+}
+
+.realtime-col-dua{
+    vertical-align: bottom;
+}
+
+.realtime-col-dua p{
+    color: #888;
+    line-height: 1.9;
+    font-size: 15px;
+    margin-bottom: 1rem;
+}
+
+.kolom {
+    width: 40%;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.kolom h5{
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.kolom p{
+    color: white;
+    line-height: 1.9;
+    margin-bottom: 1rem;
+
+}
+
+.card-satu{
+    background-color: #007bff;;
+    text-align: center ;
+}
+
+.card-satu{
+    background-color: #007bff;;
+    text-align: center ;
+}
+
+.card-dua{
+    background-color: #007bff;;
+    text-align: center ;
+}
+
+.card-tiga{
+    background-color: #007bff;;
+    text-align: center ;
+}
+
+.card-empat{
+    background-color: #007bff;;
+    text-align: center ;
+}
+
+
+
+
+/* Section 3, Result */
+
+.section-tiga{
+    background-image: url('../img/bg-img/about-us.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: white;
+    
+}
+
+.section-tiga .container{
+    margin: 100px;
+}
+
+.result{
+    width: 50%;
+    margin: 50px;
+    color: white;
+}
+
+.result h4{
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #354168;
+    line-height: 1.4;
+}
+
+.result p{
+    color: #888;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 1rem;
+}
+
+/* Section 4, Works*/
+
+.section-empat .container{
+    margin: 20px;
+    padding: 50px 50px;
+}
+
+.konten-works{
+    width: 100%;
+}
+
+.card-works{
+    display: inline-block;
+    text-align: center;
+    width: 25%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 40px 0 rgba(0,0,0,.11);
+    border: none;
+    padding: 40px 20px;
+    margin: 10px;
+}
+
+.card-works img{
+    padding: 30px;
+    position: relative;
+    border: 2px solid #00dcd8;
+    max-width: 140px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.card-works h5{
+    color: #222;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.card-works p{
+    color:  #888;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.header-works{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.header-works h2{
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    color:  #13287e;
+    line-height: 1.4;
+}
+
+.header-works p{
+    color: #888;
+    line-height: 2;
+    font-size: 16px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+
+/* Akhir Section 4, Works */
+
+/* Section 5, Our Core Service */
+.konten{
+    width: 100%;
+}
+
+.card{
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 4px 17px 0px rgba(0,0,0,0.59);
+    -webkit-box-shadow: 3px 4px 17px 0px rgba(0,0,0,0.59);
+    -moz-box-shadow: 3px 4px 17px 0px rgba(0,0,0,0.59);
+}
+
+.section-lima .container{
+    margin: 20px;
+    padding: 50px 100px;
+}l,
+
+.our-core .header{
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.our-core h5{
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    color: #13287e;
+    line-height: 1.4;
+}
+
+.our-core .header h5{
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    color: #13287e;
+    line-height: 1.4;
+}
+
+.our-core p{
+    color: #888;
+    line-height: 2;
+    font-size: 16px;
+
+}
+
+.header .img{
+    margin-bottom: 30px;
+}
+
+.bg-our-core{
+    display: inline-block;
+    width: 40%;
+    background-size: 50%;
+}
+
+.bg-our-core-1{
+    width: 100%;
+}
+
+.header p{
+    padding: 0 160px;
+}
+
+.card-our-core{
+    display: inline-block;
+}
+
+.card-our{
+    display: inline-block;
+    width: 75%;
+}
+
+.bg-card{
+    width: 20%;
+}
+
+.bg-our-core.core-img{
+    width: 40%;
+    display: inline-block;
+}
+
+.bg-our-core.card-our-core{
+    width: 55%;
+}
+
+
+
+/* ---------- Responsive --------------- */
+
+@media screen and (max-width: 768px){
+    .realtime {
+        width: 100%;
+        margin: auto;
+    }
+    .realtime-col {
+        width: 100%;
+    }
+    .result {
+        width: 100%;
+        margin: auto;
+        color: white;
+    }
+    p {
+        line-height: 1.9;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 15px;
+    }
+    h4 {
+        font-size: 24px;
+    }
+
+    .home {
+        width: 90%;
+        margin: 20px;
+    }
+
+    .section-home{
+        background-image: none;
+    }
+
+    .section-tiga{
+        background-image: none;
+
+    }
+
+    .card-works{
+        width: 35%;
+    }
+
+    .konten-work{
+        width: 100%;
+        margin: 10px;
+    }
+
+    .section-empat .container{
+        padding: 10px;
+    }
+
+    .realtime-col{
+        width: 100%;
+        margin: 20px;
+    }
+}
+
+/* @media screen and (max-width: 768px){
+    
+} */
+
+/* jangan pake react vieu, pake laravel aja, 
+aplikasi yg sifatnya bisa di search seperti company profil dan sosmed, yg sifatnya harus bisa di seacrh gk boleh pake one page engine,
+SPA gak bisa buat search engin optimation, */
